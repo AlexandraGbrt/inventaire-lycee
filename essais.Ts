@@ -47,7 +47,7 @@ export const suiviPrets = [
 
 // On définit toujours ses "outils" (interfaces) et ses "données" (tableaux) AVANT de s'en servir dans une fonction.
 // 1. La règle pour les élèves
-export interface Eleve {
+/* export interface Eleve {
     nom: string;
     idMaterielEmprunte: string | null;
 }
@@ -69,7 +69,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
+ */
 
 
 
@@ -110,7 +110,7 @@ console.log(listeRetardataires);
 
 
 
-function trouverLocataire (idRecherche :string) {
+/* function trouverLocataire (idRecherche :string) {
     const resultat = listeEleves.find( eleve => eleve.idMaterielEmprunte === idRecherche)
     
     console.log(resultat?.nom)
@@ -123,4 +123,4 @@ rl.question('Quel ID de PC cherchez-vous ? ', (reponse) => {
   trouverLocataire(reponse)
   // 2. Ferme l'interface avec rl.close()
   rl.close()
-});
+}); */
