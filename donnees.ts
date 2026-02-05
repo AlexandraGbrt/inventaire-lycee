@@ -1,3 +1,6 @@
+
+// ----------------- PC FIXES ----------------- //
+
 export interface PCFixe {
     niveau: number;
     salle: string;
@@ -11,7 +14,7 @@ export interface PCFixe {
     divers?: string;
 }
 
-export const inventaireGlobal: PCFixe[] = [
+export const inventairePCFixe: PCFixe[] = [
     // --- NIVEAU -1 ---
     { niveau: -1, salle: "atelier", nomPC: "LENOVO M73", quantite: 2, annee: 2015, se: "W7", ssd: 0, aCortex: false },
 
@@ -91,7 +94,7 @@ export const inventaireGlobal: PCFixe[] = [
 ];
 
 
-// ---------- IMPRIMANTES ----------- //
+// ------------------- IMPRIMANTES ------------------- //
 
 export interface Imprimante {
     niveau: number;
@@ -145,4 +148,33 @@ export const inventaireImprimantes: Imprimante[] = [
     // --- NIVEAU 5 ---
     { niveau: 5, salle: "S510", modele: "HP M402", type: "NB", quantite: 1 },
     { niveau: 5, salle: "S504", modele: "HP 4014N", type: "NB", quantite: 1 }
+];
+
+
+
+// ------------------- PC PORTABLES ------------------- //
+
+export interface PCPortable {
+    id: number;
+    nom: string;
+    se: string;
+    enPret: boolean;
+    emprunteur?: string; // ? = optionnel
+    datePret?: string;
+    dateRendu?: string;
+}
+
+// Dans donnees.ts
+export const inventairePCPortable : PCPortable[] = [
+    { id: 1, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
+    { id: 2, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    { id: 3, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
+    { id: 4, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    { id: 5, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
+    { id: 6, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    { id: 7, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
+    { id: 8, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    { id: 9, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
+    { id: 10, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    // ...
 ];

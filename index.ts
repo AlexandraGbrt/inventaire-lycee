@@ -1,4 +1,4 @@
-import { inventaireGlobal, inventaireImprimantes } from "./donnees";
+import { inventairePCFixe, inventaireImprimantes, inventairePCPortable } from "./donnees";
 import * as readline from 'readline';
 
 const rl = readline.createInterface({
@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 function trouverNombreSalleAvecPC (idRecherche :number) {
-    const pcNiveau3 = inventaireGlobal.filter( pc => pc.niveau === 3)
+    const pcNiveau3 = inventairePCFixe.filter( pc => pc.niveau === 3)
     // console.log("Au niveau 3 il y a "+ pcNiveau3.length + " salles avec PC.")
 }
 trouverNombreSalleAvecPC(3);
@@ -17,7 +17,7 @@ function nombrePC (idRecherche :number) {
     let totalPC = 0;
 
     // On utilise idRecherche et non un niveau pour être flexible
-    const pcNiveau = inventaireGlobal.filter( pc => pc.niveau === idRecherche);
+    const pcNiveau = inventairePCFixe.filter( pc => pc.niveau === idRecherche);
 
     pcNiveau.forEach(unPC => {
         totalPC += unPC.quantite;
@@ -37,7 +37,7 @@ function totalParcPC (systeme: string) {
     let sallesW10 : string[] = [];
 
 
-    inventaireGlobal.forEach(pc => {
+    inventairePCFixe.forEach(pc => {
      total += pc.quantite;
      if (pc.se === systeme ) {
             totalW10 += pc.quantite;
