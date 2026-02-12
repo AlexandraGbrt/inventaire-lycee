@@ -157,6 +157,7 @@ export const inventaireImprimantes: Imprimante[] = [
 export interface PCPortable {
     id: number;
     nom: string;
+    numSerie?: string;
     se: string;
     enPret: boolean;
     emprunteur?: string; // ? = optionnel
@@ -164,17 +165,19 @@ export interface PCPortable {
     dateRendu?: string;
 }
 
-// Dans donnees.ts
 export const inventairePCPortable : PCPortable[] = [
-    { id: 1, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
-    { id: 2, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
-    { id: 3, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
-    { id: 4, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
-    { id: 5, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
-    { id: 6, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
-    { id: 7, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
-    { id: 8, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
-    { id: 9, nom: "PORT-01", se: "W11", enPret: true, emprunteur: "M. Durand" },
-    { id: 10, nom: "PORT-02", se: "W11", enPret: false, emprunteur: "" },
+    { id: 1, nom: "HPG7-09-W10", numSerie:"#5CD102PML4", se: "W10", enPret: true, emprunteur: "Thomas Helios" },
+    { id: 2, nom: "Lenovo-PW027KBZ", numSerie:"#5CD102PML4", se: "W10", enPret: true, emprunteur: "CPE Blandine Vandenheste" },
+
+    { id: 3, nom: "s8177-tice-m12", numSerie:"PW029QAH", se: "W10", enPret: false},
+    { id: 4, nom: "s8177-tice-m13", numSerie:"PW029QJ0" , se: "W10", enPret: false},
+    { id: 5, nom: "HPG7-06-W10", numSerie:"#5CD102PL5G", se: "W07", enPret: false},
+
+    { id: 6, nom: "HPG7...", se: "W10", enPret: true, emprunteur: "Cohen Maxime" },
+    { id: 7, nom: "PORT-01", se: "W10", enPret: true, emprunteur: "???" },
+    { id: 8, nom: "PORT-02", se: "W10", enPret: true, emprunteur: "???" },
+    { id: 9, nom: "PORT-01", se: "W10", enPret: true, emprunteur: "Ines Mougni" },
+    { id: 10, nom: "PORT-01", se: "W10", enPret: true, emprunteur: "Sara Micheli" },
+
     // ...
 ];

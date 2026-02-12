@@ -30,7 +30,7 @@ nombrePC(3);
 
 
 
-// --------- TOTAL PC PARC ------- Salle W10 + nombre de PC ---------
+// --------- TOTAL PC PARC ------- Salle W10 + nombre de PC --------- //
 function totalParcPC (systeme: string) {
     let total = 0;
     let totalW10 = 0;     // Uniquement pour Windows 10
@@ -65,3 +65,28 @@ rl.question('Quel système voulez-vous analyser (W10, W11) ? ', (reponse) => {
   // On ferme le tunnel 
   rl.close();
 });
+
+
+
+// --------- PC PORTABLES ------- Nombre PC dispo & liste emprunteur --------- //
+
+function pcPortableDispo () {
+    let pcDispo = inventairePCPortable.filter( pc => pc.enPret === false);
+
+    console.log ("Il reste " + pcDispo.length + " PC portables en stock" );
+}
+
+pcPortableDispo();
+
+
+function listeEmprunteurs () {
+    let pcEnPret = inventairePCPortable.filter (pc => pc.enPret === true);
+
+    pcEnPret.forEach(unPC => {
+        console.log (unPC.emprunteur);
+    })
+   
+
+}
+
+listeEmprunteurs();
