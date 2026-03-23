@@ -10,5 +10,11 @@ Ce projet permet de gérer le parc informatique (PC Portables et Imprimantes).
 1. Aller dans chaque dossier (`parc-api` et `parc-client`).
 2. Lancer `npm install` pour installer les outils.
 
+
+BACK :
 npx ts-node src/index.ts
 http://localhost:3000/api-docs
+
+
+FRONT : 
+npm run dev
