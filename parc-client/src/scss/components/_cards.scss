@@ -1,0 +1,56 @@
+.carte-objet {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; // Pour que rien ne dépasse des bords arrondis
+  border: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+
+  .badge-salle {
+    background: $clr-bg;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $clr-primary;
+    align-self: flex-start;
+    margin: 16px 16px 0;
+    border-radius: 20px;
+  }
+
+  .carte-content {
+    padding: 16px;
+
+    .nom-objet {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .details {
+      font-size: 0.9rem;
+      color: $clr-text-light;
+      margin-bottom: 16px;
+    }
+  }
+
+  .etat-dotation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f7fafc;
+    padding-top: 12px;
+
+    .annee {
+      font-size: 0.8rem;
+      color: #a0aec0;
+    }
+
+    .pastille {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      &.en-ligne { background: $clr-success; }
+      &.occupe { background: #f6ad55; }
+    }
+  }
+}

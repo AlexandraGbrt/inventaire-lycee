@@ -1,0 +1,26 @@
+// Couleurs
+$clr-primary: #1a73e8;
+$clr-bg: #f8f9fa;
+$clr-white: #ffffff;
+
+$clr-text: #202124;
+$clr-text-light: #5f6368;
+
+$clr-success: #1e8e3e;
+$clr-warning: #f9ab00;
+$clr-danger: #d93025;
+
+// Espacements & Arrondis
+$radius-lg: 12px;
+$radius-sm: 8px;
+$gap-grid: 20px;
+
+// Police principale
+$font-main: 'Inter', sans-serif;
+
+// Tailles de police (Échelle modulaire)
+$fs-h1: 1.5rem;    // Titre principal
+$fs-h2: 1.25rem;   // Titres de sections
+$fs-card: 1.1rem;  // Nom de l'équipement
+$fs-body: 0.95rem; // Texte de détail
+$fs-small: 0.8rem; // Badges et dates

@@ -1,59 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gestion Inventaire | Lycée</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/src/scss/main.scss" />
-</head>
-<body>
-  
-  <header class="main-header">
-    <div class="container">
-      <h1>Inventaire <span> Parc Informatique</span> du Lycée</h1>
-      <nav class="nav-filters">
-        <button class="btn-tab active" data-type="imprimantes">Imprimantes</button>
-        <button class="btn-tab" data-type="pc-fixes">PC Fixes</button>
-        <button class="btn-tab" data-type="portables/dispo">Portables</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventaire Lycée</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+  </head>
+  <body>
+    <header class="barre-haute">
+      <h1>Inventaire Parc Informatique Lycée</h1>
+      <nav class="filtres-equipes">
+        <button class="onglet actif">Tous les équipements</button>
+        <button class="onglet">🖨️ Imprimantes</button>
+        <button class="onglet">🖥️ PC Fixes</button>
+        <button class="onglet">💻 Portables</button>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <div class="table-header">
-      <h2 id="table-title">Liste du matériel</h2>
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="Filtrer par salle ou modèle...">
-      </div>
-    </div>
+    <main class="contenu-principal">
+      <section class="zone-stats">
+        <div class="stat-card">
+          <span class="label">Total</span>
+          <span class="valeur">12</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">PC Fixes</span>
+          <span class="valeur">5</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">Portables</span>
+          <span class="valeur">4</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">Hors-ligne</span>
+          <span class="valeur rouge">2</span>
+        </div>
+      </section>
 
-    <div class="table-responsive">
-      <table id="inventory-table">
-        <thead>
-          <tr id="table-head-row">
-            </tr>
-        </thead>
-        <tbody id="table-body">
-          <tr>
-            <td colspan="100%" class="loading">Chargement des données...</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
+      <section class="grille-inventaire" id="inventory-grid">
+        <article class="carte-objet">
+          <div class="badge-salle">Salle 104</div>
+          <div class="carte-content">
+            <h3 class="nom-objet">Tice-01</h3>
+            <p class="details">Windows 11 • i5 16Go</p>
+            <div class="etat-dotation">
+              <span class="annee">Dotation 2023</span>
+              <span class="pastille en-ligne"></span>
+            </div>
+          </div>
+        </article>
 
-  <footer class="main-footer">
-    <div class="container">
-      <p>&copy; 2026 - Outil d'Administration Système</p>
-    </div>
-  </footer>
+        <article class="carte-objet">
+          <div class="badge-salle">CDI</div>
+          <div class="carte-content">
+            <h3 class="nom-objet">HP-LaserJet-02</h3>
+            <p class="details">Couleur • Recto/Verso</p>
+            <div class="etat-dotation">
+              <span class="annee">Dotation 2021</span>
+              <span class="pastille occupe"></span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
 
-  <script type="module" src="/src/js/main.js"></script>
-</body>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
 </html>

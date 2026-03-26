@@ -1,0 +1,46 @@
+.barre-haute {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    margin-bottom: 20px;
+    color: $clr-text;
+  }
+}
+
+.filtres-equipes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .onglet {
+    // On enlève le style par défaut des boutons
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: $font-main;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $clr-text-light;
+    transition: all 0.2s ease;
+
+    // Effet au survol
+    &:hover {
+      background: #f0f4f8;
+      color: $clr-primary;
+    }
+
+    // Style pour le bouton actif (celui qui est sélectionné)
+    &.actif {
+      background: $clr-primary;
+      color: white;
+      box-shadow: 0 4px 10px rgba(26, 115, 232, 0.3);
+    }
+  }
+}

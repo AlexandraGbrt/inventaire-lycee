@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  font-size: $fs-body;
+  color: $clr-text;
+  background-color: $clr-bg;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; // Rend la police plus fine sur Mac/Chrome
+}
+
+h1 { font-size: $fs-h1; font-weight: 700; }
+h3 { font-size: $fs-card; font-weight: 600; }
